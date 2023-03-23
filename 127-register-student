@@ -2,6 +2,6 @@ public String registerStudent(String name, String phone, String email) {
     // code here
     apxio__Student__c stu = new apxio__Student__c(Name=name,apxio__Phone__c=phone,apxio__Email__c=email);
     INSERT stu;
-    List<apxio__Student__c> stuList = [Select apxio__Registration_Number__c from apxio__Student__c where Name=name and apxio__Email__c=email];
+    List<apxio__Student__c> stuList = [Select Name,Email, apxio__Registration_Number__c from apxio__Student__c where Name=name and apxio__Email__c=email];
     return stuList[0].apxio__Registration_Number__c;
 }
