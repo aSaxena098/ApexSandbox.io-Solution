@@ -1,0 +1,19 @@
+public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean passedProject) {
+    List<Boolean> boolList = new List<Boolean>();
+    boolList.add(passedExam);
+    boolList.add(passedAssignments);
+    boolList.add(passedProject);
+    Integer count = 0;
+    for(Boolean b:boolList)
+    {
+        if(b==true)
+        {
+            count++;
+        }
+    }
+    if(count>=2)
+    {
+        return true;
+    }
+    return false;
+}
