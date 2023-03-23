@@ -4,7 +4,7 @@ public Id insertCourse(String name, String details, Integer credits) {
     cs.Name=name;
     cs.apxio__Course_Details__c=details;
     String cred = String.valueOf(credits);
-    List<String> credValues = new List<String>(){'1','2','3','4'};
+    List<String> credValues = new List<String>{'1','2','3','4'};
     if(!credValues.contains(cred))
     {
         return null;
