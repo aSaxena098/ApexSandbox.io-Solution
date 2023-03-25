@@ -2,13 +2,13 @@ public void createCourseAndClass(String name, String description) {
     // code here
     apxio__Course__c cs = new apxio__Course__c();
     cs.Name = name;
+    description = description.substring(0, 255);
     cs.apxio__Course_Details__c = description;
     INSERT cs;
 
     apxio__Class__c ch = new apxio__Class__c();
     ch.Name = name;
     ch.apxio__Course__c = cs.Id;
-    description = description.substring(0, 255);
     ch.apxio__Description__c = description;
     INSERT ch;
 }
