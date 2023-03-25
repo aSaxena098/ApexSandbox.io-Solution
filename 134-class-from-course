@@ -1,6 +1,7 @@
 public Id classFromCourse(String courseName) {
     // code here
     apxio__Class__c cl = new apxio__Class__c();
+    cl.Name = courseName;
     cl.apxio__Course__c = courseName;
     INSERT cl;
     return cl.Id;
