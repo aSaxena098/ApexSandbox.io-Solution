@@ -1,6 +1,6 @@
 public void enrollStudents(List<String> emails, String className) {
     // code here
-    List<apxio__Student__c> enrollStuList = new List<apxio__Student__c>(); 
+    List<apxio__Class_Enrollment__c > enrollStuList = new List<apxio__Class_Enrollment__c >(); 
     List<apxio__Class__c> classList = [Select Id from apxio__Class__c where Name=:className];
     List<apxio__Student__c> studentList = [Select Id from apxio__Student__c where apxio__Email__c IN: emails];
     for(apxio__Student__c stu:studentList)
