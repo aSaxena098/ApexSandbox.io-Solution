@@ -1,0 +1,15 @@
+public Integer fibonacci(Integer n) {
+    //code here
+    Integer i=1;
+    Integer sum=0;
+    Integer a=0;
+    Integer b=1;
+    while(i<=n)
+    {
+        sum = sum + (a+b);
+        a=b;
+        b=sum;
+        i++;
+    }
+    return sum;
+}
