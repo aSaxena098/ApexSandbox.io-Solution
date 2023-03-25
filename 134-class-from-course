@@ -1,7 +1,7 @@
 public Id classFromCourse(String courseName) {
     // code here
     List<apxio__Course__c> courseList = [Select Id from apxio__Course__c where Name =:courseName];
-    if(courseList.size==1)
+    if(courseList.size()==1)
     {
         apxio__Class__c cl = new apxio__Class__c();
         cl.Name = courseName;
