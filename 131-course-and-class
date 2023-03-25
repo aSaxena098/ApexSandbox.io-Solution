@@ -8,6 +8,6 @@ public void createCourseAndClass(String name, String description) {
     apxio__Class__c ch = new apxio__Class__c();
     ch.Name = name;
     ch.apxio__Course__c = cs.Id;
-    ch.apxio__Description__c = description;
+    ch.apxio__Description__c = description.substring(0,255);
     INSERT ch;
 }
