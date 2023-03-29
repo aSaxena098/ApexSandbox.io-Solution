@@ -6,9 +6,9 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
     }
     List<Integer> countList = new List<Integer>();
     Integer count=0;
-    for(Integer i:numbers)
+    for(Integer i=0;i<numbers.size();i++)
     {
-        if(i==1)
+        if(numbers[i]==1)
         {
             count++;
         }else
