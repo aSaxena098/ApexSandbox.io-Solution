@@ -1,5 +1,6 @@
 public Integer maxConsecutiveOnes(Integer[] numbers) {
     //code here
+    List<Integer> countList = new List<Integer>();
     Integer count=0;
     for(Integer i:numbers)
     {
@@ -7,8 +8,18 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
         {
             count++;
         }else{
+            countList.add(count);
+            count=0;
             continue;
         }
     }
-    return count;
+    int maxCount = countList[0];
+    for(Integer i=0;i<countList.size();i++)
+    {
+        if(maxCount<countList[i])
+        {
+            maxCount = countList[i]
+        }
+    }
+    return maxCount;
 }
