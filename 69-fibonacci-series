@@ -10,6 +10,7 @@ public List<Integer> fibonacciSeries(Integer n) {
         a=b;
         b=sum;
         fiboNumbers.add(sum);
+        i++;
     }
     return fiboNumbers;
 }
