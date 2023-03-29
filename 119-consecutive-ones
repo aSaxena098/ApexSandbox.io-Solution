@@ -17,7 +17,7 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
             count=0;
         }
     }
-
+    countList.add(count);
     Integer maxCount = countList[0];
     for(Integer i=0;i<countList.size();i++)
     {
