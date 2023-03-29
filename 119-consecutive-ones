@@ -11,12 +11,13 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
         if(numbers[i]==1)
         {
             count++;
-        }else
+        }else if(numbers[i]==0)
         {
             countList.add(count);
             count=0;
         }
     }
+
     Integer maxCount = countList[0];
     for(Integer i=0;i<countList.size();i++)
     {
