@@ -4,7 +4,7 @@ public List<Integer> fibonacciSeries(Integer n) {
     Integer a=1,b=1,i=0,sum=0;
     fiboNumbers.add(a);
     fiboNumbers.add(b);
-    while(i<=n)
+    while(i<n)
     {
         sum = a+b;
         a=b;
