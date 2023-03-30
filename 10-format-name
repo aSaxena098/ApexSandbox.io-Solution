@@ -3,10 +3,10 @@ public String formatName(String firstName, String lastName) {
     if(firstName!=null && lastName=='')
     {
         return firstName;
-    }else if(firstName=='' && lastName!='')
+    }else if(firstName==null && lastName!=null)
     {
         return lastName;
-    }else if(firstName!='' && lastName!='')
+    }else if(firstName!=null && lastName!=null)
     {
         return lastName+', '+firstName;
     }else{
