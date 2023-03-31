@@ -1,0 +1,27 @@
+public List<Account> checkAccounts(List<Account> accounts)
+{
+    // code here 
+    try
+    {
+        if(accounts.isEmpty())
+        {
+            throw new Exception('accounts should not be null');
+        }
+        for(Account acc:accounts)
+        {
+            if(String.isBlank(acc.BillingCity))
+            {
+                throw new AccountException('Invalid Billing City');
+            }
+        }
+        return accounts;
+        }
+    catch(AccountException e)
+    {
+        
+    }
+    
+}
+
+//do not remove the following custom-defined exception
+public class AccountException extends Exception {}
