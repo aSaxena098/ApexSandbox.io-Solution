@@ -1,8 +1,6 @@
 public List<Account> checkAccounts(List<Account> accounts)
 {
     // code here 
-    try
-    {
         if(accounts.isEmpty())
         {
             throw new AccountException('accounts should not be null');
@@ -15,12 +13,6 @@ public List<Account> checkAccounts(List<Account> accounts)
             }
         }
         return accounts;
-        }
-    catch(AccountException e)
-    {
-
-    }
-    
 }
 
 //do not remove the following custom-defined exception
