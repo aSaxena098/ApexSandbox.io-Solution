@@ -5,7 +5,7 @@ public List<Account> checkAccounts(List<Account> accounts)
     {
         if(accounts.isEmpty())
         {
-            throw new Exception('accounts should not be null');
+            throw new AccountException('accounts should not be null');
         }
         for(Account acc:accounts)
         {
@@ -18,7 +18,7 @@ public List<Account> checkAccounts(List<Account> accounts)
         }
     catch(AccountException e)
     {
-        
+
     }
     
 }
