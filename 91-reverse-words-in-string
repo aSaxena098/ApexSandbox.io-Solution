@@ -1,0 +1,8 @@
+public static String reverseWords(String str){
+    String ansStr = '';
+    for(Integer i=str.length();i>=0;i--){
+        ansStr +=str.charAt(i); 
+    }
+    return ansStr;
+
+}
