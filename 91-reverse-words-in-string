@@ -1,8 +1,8 @@
 public static String reverseWords(String str){
     String ansStr = '';
     List<String> strList = str.split(' ');
-    for(String string:strList){
-        ansStr += string.reverse();
+    for(String stri:strList){
+        ansStr += stri.reverse();
     }
     return ansStr;
 }
