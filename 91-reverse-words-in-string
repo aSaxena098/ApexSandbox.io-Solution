@@ -2,7 +2,7 @@ public static String reverseWords(String str){
     String ansStr = '';
     List<String> strList = str.split(' ');
     for(String stri:strList){
-        ansStr += stri.reverse();
+        ansStr += stri.reverse() + ' ';
     }
     return ansStr;
 }
