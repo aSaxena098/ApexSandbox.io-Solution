@@ -1,8 +1,7 @@
 public static String reverseWords(String str){
     String ansStr = '';
     for(Integer i=str.length()-1;i>=0;i--){
-        ansStr +=str.charAt(i); 
+        ansStr +=str.substring(i,i+1); 
     }
     return ansStr;
-
 }
