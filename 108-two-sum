@@ -1,0 +1,13 @@
+public static List<Integer> twoSum(List<Integer> nums, Integer target) {
+     //code here
+    List<Integer> ans = new List<Integer>();
+    for(Integer i=0;i<nums.size();i++){
+        for(Integer j=1;j<nums.size();j++){
+            if(nums[i]+nums[j]==target){
+                ans.add(i);
+                ans.add(j);
+            }
+        }
+    }
+    return ans;
+}
