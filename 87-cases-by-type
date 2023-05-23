@@ -6,7 +6,7 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
             List<Case> newCase = new List<Case>();
             newCase.add(cas);
             caseMap.put(cas.Type,newCase);
-        }else{
+        }else if(cas.Type!=''){
             List<Case> existingCase = new List<Case>();
             existingCase = caseMap.get(cas.Type);
             existingCase.add(cas);
