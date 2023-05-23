@@ -7,7 +7,10 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
             newCase.add(cas);
             caseMap.put(cas.Type,newCase);
         }else{
-            caseMap.put(cas.Type,caseMap.get(cas.Type).add(cas));
+            List<Case> existingCase = new List<Case>();
+            existingCase = caseMap.get(cas.Type);
+            existingCase.add(cas);
+            caseMap.put(cas.Type,existingCase);
         }
     }
     return caseMap;
