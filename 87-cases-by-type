@@ -8,8 +8,8 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
             caseMap.put(cas.Type,newCase);
         }else{
             List<Case> existingCase = new List<Case>();
-            existigCase.add(caseMap.get(cas.type));
-            caseMap.put(cas.Type,existigCase);
+            existingCase.add(caseMap.get(cas.type));
+            caseMap.put(cas.Type,existingCase);
         }
     }
     return caseMap;
