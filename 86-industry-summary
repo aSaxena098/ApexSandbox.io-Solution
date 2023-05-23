@@ -1,11 +1,11 @@
 public Map<String, Decimal> industrySummary(List<Account> accounts) {
     //code here
-    List<AggregateResult> annualRevenueSumList = [Select Sum(AnnualRevenue),Industry from Account GROUP BY Industry];
+    List<AggregateResult> annualRevenueSumList = [Select Sum(AnnualRevenue) annualRevenue,Industry from Account GROUP BY Industry];
     Map<String,Decimal> industryMap = new Map<String,Decimal>();
     for(AggregateResult agg:annualRevenueSumList){
         String accountIndustry = String.valueOf(agg.get('Industry')); 
         if(!industryMap.containsKey(accountIndustry)){
-            Decimal accountAnnualRevenue = Decimal.valueOf(agg.get('expr0'));
+            Decimal accountAnnualRevenue = Decimal.valueOf(agg.get('annualRevenue'));
             industryMap.put(accountIndustry,accountAnnualRevenue);
         }
     }
