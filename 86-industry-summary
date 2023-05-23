@@ -5,7 +5,7 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
     for(AggregateResult agg:annualRevenueSumList){
         String accountIndustry = String.valueOf(agg.get('Industry')); 
         if(!industryMap.containsKey(accountIndustry)){
-            Decimal accountAnnualRevenue = Decimal.valueOf(agg.get('annualRevenue'));
+            Decimal accountAnnualRevenue = agg.get('annualRevenue');
             industryMap.put(accountIndustry,accountAnnualRevenue);
         }
     }
