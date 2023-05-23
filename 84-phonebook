@@ -2,7 +2,7 @@ public Map<String, String> phonebook(List<Contact> contacts) {
     //code here
     Map<String,String> conMap = new Map<String,String>();
     for(Contact con:contacts){
-        if(!conMap.containsKey(con.Name)){
+        if(!conMap.containsKey(con.Name) && con.Phone!=''){
             conMap.put(con.Name,con.Phone);
         }
     }
