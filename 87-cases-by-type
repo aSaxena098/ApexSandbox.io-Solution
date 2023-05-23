@@ -7,7 +7,7 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
             newCase.add(cas);
             caseMap.put(cas.Type,newCase);
         }else{
-            caseMap.put(cas.Type,caseMap.get(cas.Type).add(cas););
+            caseMap.put(cas.Type,caseMap.get(cas.Type).add(cas));
         }
     }
     return caseMap;
