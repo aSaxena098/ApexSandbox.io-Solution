@@ -7,8 +7,8 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
             newCase.add(cas);
             caseMap.put(cas.Type,newCase);
         }else{
-            List<Case> existingCase = new List<Case>();
-            existingCase.add(caseMap.get(cas.type));
+            List<Case> existingCase = new List<Case>(); 
+            existingCase = caseMap.get(cas.type).add(cas.Type);
             caseMap.put(cas.Type,existingCase);
         }
     }
