@@ -1,6 +1,6 @@
 public Integer secondLargest(List<Integer> numbers) {
     //finding maximum number
     numbers.sort();
-    return nums.get(1);
+    return numbers.get(1);
 
 }
