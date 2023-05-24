@@ -1,6 +1,10 @@
 public Integer secondLargest(List<Integer> numbers) {
     //finding maximum number
-    numbers.sort();
-    return numbers.get(numbers.size()-2);
+    Set<Integer> numSet = new Set<Integer>();
+    for(Integer num:numbers){
+        numSet.add(num);
+    }
+    numSet.sort();
+    return numSet.get(numSet.size()-2);
 
 }
