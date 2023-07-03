@@ -5,11 +5,11 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
 
     while(start<endIndex){
         Integer middle = start + (endIndex-start)/2;
-        if(opportunities.get(middle).Amount<target){
+        if(opportunities.get(middle)<target){
             start = middle+1;
-        }else if(opportunities.get(middle).Amount>target){
+        }else if(opportunities.get(middle)>target){
             endIndex=middle-1;
-        }else if(opportunities.get(middle).Amount==target){
+        }else if(opportunities.get(middle)==target){
             return middle;
         }
     }
